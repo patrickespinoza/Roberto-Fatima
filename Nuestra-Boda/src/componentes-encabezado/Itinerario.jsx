@@ -1,44 +1,44 @@
 import { motion } from "framer-motion";
 
 /* =========================================
-   ITINERARIO CLÁSICO EDITORIAL
+   ITINERARIO — ROBERTO & MARTHA
 ========================================= */
 
 const palette = {
-  ink: "#1D2733",
-  inkSoft: "#39434D",
-  paper: "#F5F1E8",
-  paperLight: "#FBF9F4",
-  paperDark: "#E5DED2",
-  antiqueGold: "#A48654",
-  antiqueGoldDark: "#725B37",
-  warmGray: "#777168",
+  ink: "#0B1F3A",
+  inkSoft: "#17365D",
+  paper: "#FFFFFF",
+  paperLight: "#FFFFFF",
+  paperDark: "#FFFFFF",
+  antiqueGold: "#1E4F8A",
+  antiqueGoldDark: "#123A68",
+  warmGray: "#5E6B7A",
 };
 
 const events = [
   {
-    time: "18:00",
+    time: "2:00 PM",
     title: "Ceremonia",
-    description: "Ceremonia civil con nuestros seres queridos.",
+    description: "El momento en que daremos inicio a nuestra celebración.",
     icon: "rings",
   },
   {
-    time: "19:30",
-    title: "Recepción",
-    description: "Bienvenida con cóctel y música en vivo.",
-    icon: "glass",
-  },
-  {
-    time: "21:00",
-    title: "Cena",
-    description: "Banquete con un menú especialmente diseñado.",
+    time: "3:30 PM",
+    title: "Comida",
+    description: "Compartiremos juntos la comida y celebraremos este día tan especial.",
     icon: "dinner",
   },
   {
-    time: "23:00",
-    title: "Fiesta",
-    description: "Una noche para bailar y celebrar juntos.",
+    time: "5:00 PM",
+    title: "Vals de los novios",
+    description: "Nuestro primer baile como esposos.",
     icon: "music",
+  },
+  {
+    time: "9:00 PM",
+    title: "Pastel",
+    description: "Un momento dulce para continuar celebrando juntos.",
+    icon: "glass",
   },
 ];
 
@@ -235,14 +235,14 @@ function DecorativeDivider() {
         className="h-px w-10 sm:w-16"
         style={{
           background:
-            "linear-gradient(to right, transparent, rgba(164,134,84,0.72))",
+            "linear-gradient(to right, transparent, rgba(94,136,181,0.85))",
         }}
       />
 
       <span
         className="h-[5px] w-[5px] rotate-45 border"
         style={{
-          borderColor: "rgba(164,134,84,0.72)",
+          borderColor: "rgba(94,136,181,0.85)",
         }}
       />
 
@@ -250,7 +250,7 @@ function DecorativeDivider() {
         className="h-px w-10 sm:w-16"
         style={{
           background:
-            "linear-gradient(to left, transparent, rgba(164,134,84,0.72))",
+            "linear-gradient(to left, transparent, rgba(94,136,181,0.85))",
         }}
       />
     </div>
@@ -308,7 +308,7 @@ function TimelineEvent({ event, index, isLast }) {
             lg:hidden
           "
           style={{
-            backgroundColor: "rgba(164,134,84,0.32)",
+            backgroundColor: "rgba(94,136,181,0.55)",
           }}
         />
       )}
@@ -355,14 +355,14 @@ function TimelineEvent({ event, index, isLast }) {
             justify-center
             rounded-full
             border
-            bg-[#FBF9F4]
+            bg-white
             sm:h-14
             sm:w-14
           "
           style={{
-            borderColor: "rgba(164,134,84,0.55)",
+            borderColor: "rgba(94,136,181,0.75)",
             color: palette.antiqueGoldDark,
-            boxShadow: "0 7px 20px rgba(29,39,51,0.08)",
+            boxShadow: "0 7px 20px rgba(0,0,0,0.16)",
           }}
         >
           <EventIcon type={event.icon} />
@@ -380,7 +380,7 @@ function TimelineEvent({ event, index, isLast }) {
               lg:block
             "
             style={{
-              backgroundColor: "rgba(164,134,84,0.32)",
+              backgroundColor: "rgba(94,136,181,0.55)",
             }}
           />
         )}
@@ -446,7 +446,7 @@ function EventContent({ event, index, alignment }) {
           sm:text-[9px]
         "
         style={{
-          color: palette.antiqueGoldDark,
+          color: "#8FB4DA",
         }}
       >
         Momento {String(index + 1).padStart(2, "0")}
@@ -477,7 +477,7 @@ function EventContent({ event, index, alignment }) {
             sm:text-[39px]
           "
           style={{
-            color: palette.ink,
+            color: "#FFFFFF",
           }}
         >
           {event.time}
@@ -491,7 +491,7 @@ function EventContent({ event, index, alignment }) {
             sm:block
           "
           style={{
-            backgroundColor: "rgba(164,134,84,0.55)",
+            backgroundColor: "rgba(94,136,181,0.75)",
           }}
         />
 
@@ -503,7 +503,7 @@ function EventContent({ event, index, alignment }) {
             sm:text-[28px]
           "
           style={{
-            color: palette.inkSoft,
+            color: "#D9E6F2",
           }}
         >
           {event.title}
@@ -519,7 +519,7 @@ function EventContent({ event, index, alignment }) {
           sm:text-[15px]
         "
         style={{
-          color: palette.warmGray,
+          color: "rgba(255,255,255,0.68)",
         }}
       >
         {event.description}
@@ -554,14 +554,7 @@ export default function ItinerarioRelojCentral() {
         lg:py-32
       "
       style={{
-        background: `
-          linear-gradient(
-            180deg,
-            ${palette.paperLight} 0%,
-            ${palette.paper} 56%,
-            ${palette.paperDark} 100%
-          )
-        `,
+        backgroundColor: palette.ink,
       }}
     >
       {/* TEXTURA DE PAPEL */}
@@ -577,8 +570,8 @@ export default function ItinerarioRelojCentral() {
           backgroundImage: `
             repeating-linear-gradient(
               0deg,
-              rgba(29,39,51,0.025) 0px,
-              rgba(29,39,51,0.025) 1px,
+              rgba(255,255,255,0.025) 0px,
+              rgba(255,255,255,0.025) 1px,
               transparent 1px,
               transparent 5px
             )
@@ -598,7 +591,7 @@ export default function ItinerarioRelojCentral() {
           lg:inset-10
         "
         style={{
-          borderColor: "rgba(164,134,84,0.25)",
+          borderColor: "rgba(255,255,255,0.18)",
         }}
       />
 
@@ -612,7 +605,7 @@ export default function ItinerarioRelojCentral() {
           lg:inset-[46px]
         "
         style={{
-          borderColor: "rgba(164,134,84,0.1)",
+          borderColor: "rgba(255,255,255,0.08)",
         }}
       />
 
@@ -626,7 +619,7 @@ export default function ItinerarioRelojCentral() {
           top-6
           h-16
           w-16
-          text-[#A48654]/25
+          text-white/15
           sm:left-9
           sm:top-9
           sm:h-20
@@ -643,7 +636,7 @@ export default function ItinerarioRelojCentral() {
           h-16
           w-16
           rotate-90
-          text-[#A48654]/25
+          text-white/15
           sm:right-9
           sm:top-9
           sm:h-20
@@ -660,7 +653,7 @@ export default function ItinerarioRelojCentral() {
           h-16
           w-16
           -rotate-90
-          text-[#A48654]/25
+          text-white/15
           sm:bottom-9
           sm:left-9
           sm:h-20
@@ -677,7 +670,7 @@ export default function ItinerarioRelojCentral() {
           h-16
           w-16
           rotate-180
-          text-[#A48654]/25
+          text-white/15
           sm:bottom-9
           sm:right-9
           sm:h-20
@@ -694,7 +687,7 @@ export default function ItinerarioRelojCentral() {
           h-[250px]
           w-[145px]
           -rotate-12
-          text-[#A48654]/10
+          text-[#5E88B5]/25
           sm:h-[310px]
           sm:w-[180px]
           lg:left-2
@@ -710,7 +703,7 @@ export default function ItinerarioRelojCentral() {
           h-[250px]
           w-[145px]
           rotate-[168deg]
-          text-[#A48654]/10
+          text-[#5E88B5]/25
           sm:h-[310px]
           sm:w-[180px]
           lg:right-2
@@ -763,7 +756,7 @@ export default function ItinerarioRelojCentral() {
               sm:tracking-[0.55em]
             "
             style={{
-              color: palette.antiqueGoldDark,
+              color: "#8FB4DA",
             }}
           >
             Itinerario
@@ -785,7 +778,7 @@ export default function ItinerarioRelojCentral() {
               md:text-[64px]
             "
             style={{
-              color: palette.ink,
+              color: "#FFFFFF",
             }}
           >
             El orden de nuestro día
@@ -803,7 +796,7 @@ export default function ItinerarioRelojCentral() {
               sm:text-base
             "
             style={{
-              color: palette.warmGray,
+              color: "rgba(255,255,255,0.68)",
             }}
           >
             Cada momento ha sido pensado para compartir, celebrar y guardar
@@ -828,7 +821,7 @@ export default function ItinerarioRelojCentral() {
             sm:mb-16
           "
           style={{
-            borderColor: "rgba(164,134,84,0.34)",
+            borderColor: "rgba(94,136,181,0.55)",
           }}
           initial={{
             opacity: 0,
@@ -852,7 +845,7 @@ export default function ItinerarioRelojCentral() {
               sm:text-[9px]
             "
             style={{
-              color: palette.antiqueGoldDark,
+              color: "#8FB4DA",
             }}
           >
             Nuestra celebración
@@ -867,10 +860,10 @@ export default function ItinerarioRelojCentral() {
               sm:text-[48px]
             "
             style={{
-              color: palette.ink,
+              color: "#FFFFFF",
             }}
           >
-            11
+            10
           </p>
 
           <p
@@ -882,10 +875,10 @@ export default function ItinerarioRelojCentral() {
               sm:text-[10px]
             "
             style={{
-              color: palette.warmGray,
+              color: "rgba(255,255,255,0.68)",
             }}
           >
-            Junio
+            Octubre · 2026
           </p>
         </motion.div>
 
@@ -942,7 +935,7 @@ export default function ItinerarioRelojCentral() {
               sm:text-base
             "
             style={{
-              color: palette.warmGray,
+              color: "rgba(255,255,255,0.68)",
             }}
           >
             Esperamos vivir cada momento contigo.

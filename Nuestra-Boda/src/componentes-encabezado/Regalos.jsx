@@ -6,14 +6,19 @@ import { useEffect, useState } from "react";
 ========================================= */
 
 const palette = {
-  ink: "#1D2733",
-  inkSoft: "#39434D",
-  paper: "#F5F1E8",
-  paperLight: "#FBF9F4",
-  paperDark: "#E5DED2",
-  antiqueGold: "#A48654",
-  antiqueGoldDark: "#725B37",
-  warmGray: "#777168",
+  ink: "#FFFFFF",
+  inkSoft: "#E6EEF7",
+  paper: "#0B1F3A",
+  paperLight: "#0B1F3A",
+  paperDark: "#0B1F3A",
+  antiqueGold: "#8FB4DA",
+  antiqueGoldDark: "#8FB4DA",
+  warmGray: "#D9E6F2",
+  navy: "#0B1F3A",
+  navySoft: "#17365D",
+  blue: "#1E4F8A",
+  blueLight: "#8FB4DA",
+  white: "#FFFFFF",
 };
 
 const fadeUp = {
@@ -151,14 +156,14 @@ function DecorativeDivider({ compact = false }) {
         className={compact ? "h-px w-8 sm:w-12" : "h-px w-10 sm:w-16"}
         style={{
           background:
-            "linear-gradient(to right, transparent, rgba(164,134,84,0.72))",
+            "linear-gradient(to right, transparent, rgba(143,180,218,0.78))",
         }}
       />
 
       <span
         className="h-[5px] w-[5px] rotate-45 border"
         style={{
-          borderColor: "rgba(164,134,84,0.72)",
+          borderColor: "rgba(143,180,218,0.78)",
         }}
       />
 
@@ -166,7 +171,7 @@ function DecorativeDivider({ compact = false }) {
         className={compact ? "h-px w-8 sm:w-12" : "h-px w-10 sm:w-16"}
         style={{
           background:
-            "linear-gradient(to left, transparent, rgba(164,134,84,0.72))",
+            "linear-gradient(to left, transparent, rgba(143,180,218,0.78))",
         }}
       />
     </div>
@@ -241,9 +246,9 @@ function CloseIcon() {
 const Regalos = () => {
   const [mostrarModal, setMostrarModal] = useState(false);
 
-  const numeroEvento = "12345678";
+  const numeroEvento = "52018455";
 
-  const linkLiverpool = `https://www.liverpool.com.mx/tienda/giftregistry/giftRegistryDetail.jsp?eventNo=${numeroEvento}`;
+  const linkLiverpool = "https://mesaderegalos.liverpool.com.mx/milistaderegalos/52018455";
 
   /* BLOQUEAR SCROLL CUANDO EL MODAL ESTÁ ABIERTO */
 
@@ -310,14 +315,7 @@ const Regalos = () => {
           lg:py-32
         "
         style={{
-          background: `
-            linear-gradient(
-              180deg,
-              ${palette.paperLight} 0%,
-              ${palette.paper} 56%,
-              ${palette.paperDark} 100%
-            )
-          `,
+          backgroundColor: palette.navy,
         }}
       >
         {/* TEXTURA DE PAPEL */}
@@ -333,8 +331,8 @@ const Regalos = () => {
             backgroundImage: `
               repeating-linear-gradient(
                 0deg,
-                rgba(29,39,51,0.025) 0px,
-                rgba(29,39,51,0.025) 1px,
+                rgba(255,255,255,0.025) 0px,
+                rgba(255,255,255,0.025) 1px,
                 transparent 1px,
                 transparent 5px
               )
@@ -354,7 +352,7 @@ const Regalos = () => {
             lg:inset-10
           "
           style={{
-            borderColor: "rgba(164,134,84,0.25)",
+            borderColor: "rgba(255,255,255,0.18)",
           }}
         />
 
@@ -368,7 +366,7 @@ const Regalos = () => {
             lg:inset-[46px]
           "
           style={{
-            borderColor: "rgba(164,134,84,0.1)",
+            borderColor: "rgba(255,255,255,0.08)",
           }}
         />
 
@@ -382,7 +380,7 @@ const Regalos = () => {
             top-6
             h-16
             w-16
-            text-[#A48654]/25
+            text-[#8FB4DA]/30
             sm:left-9
             sm:top-9
             sm:h-20
@@ -399,7 +397,7 @@ const Regalos = () => {
             h-16
             w-16
             rotate-90
-            text-[#A48654]/25
+            text-[#8FB4DA]/30
             sm:right-9
             sm:top-9
             sm:h-20
@@ -416,7 +414,7 @@ const Regalos = () => {
             h-16
             w-16
             -rotate-90
-            text-[#A48654]/25
+            text-[#8FB4DA]/30
             sm:bottom-9
             sm:left-9
             sm:h-20
@@ -433,7 +431,7 @@ const Regalos = () => {
             h-16
             w-16
             rotate-180
-            text-[#A48654]/25
+            text-[#8FB4DA]/30
             sm:bottom-9
             sm:right-9
             sm:h-20
@@ -450,7 +448,7 @@ const Regalos = () => {
             h-[250px]
             w-[145px]
             -rotate-12
-            text-[#A48654]/10
+            text-[#8FB4DA]/15
             sm:h-[310px]
             sm:w-[180px]
             lg:left-2
@@ -466,7 +464,7 @@ const Regalos = () => {
             h-[250px]
             w-[145px]
             rotate-[168deg]
-            text-[#A48654]/10
+            text-[#8FB4DA]/15
             sm:h-[310px]
             sm:w-[180px]
             lg:right-2
@@ -502,7 +500,7 @@ const Regalos = () => {
             "
             style={{
               color: palette.antiqueGoldDark,
-              borderColor: "rgba(164,134,84,0.42)",
+              borderColor: "rgba(143,180,218,0.48)",
             }}
             initial={{
               opacity: 0,
@@ -633,7 +631,7 @@ const Regalos = () => {
               sm:px-10
             "
             style={{
-              borderColor: "rgba(164,134,84,0.3)",
+              borderColor: "rgba(143,180,218,0.35)",
             }}
             initial={{
               opacity: 0,
@@ -699,14 +697,14 @@ const Regalos = () => {
               sm:px-10
             "
             style={{
-              backgroundColor: palette.ink,
-              borderColor: palette.ink,
-              color: palette.paperLight,
-              boxShadow: "0 12px 28px rgba(29,39,51,0.12)",
+              backgroundColor: palette.blue,
+              borderColor: palette.blueLight,
+              color: palette.white,
+              boxShadow: "0 12px 28px rgba(0,0,0,0.18)",
             }}
             whileHover={{
               y: -2,
-              backgroundColor: palette.inkSoft,
+              backgroundColor: palette.navySoft,
             }}
             whileTap={{
               scale: 0.985,
@@ -789,8 +787,8 @@ const Regalos = () => {
                 md:px-14
               "
               style={{
-                backgroundColor: palette.paperLight,
-                borderColor: "rgba(164,134,84,0.48)",
+                backgroundColor: palette.navy,
+                borderColor: "rgba(143,180,218,0.48)",
                 boxShadow: "0 30px 100px rgba(0,0,0,0.34)",
               }}
               initial={{
@@ -826,8 +824,8 @@ const Regalos = () => {
                   backgroundImage: `
                     repeating-linear-gradient(
                       0deg,
-                      rgba(29,39,51,0.025) 0px,
-                      rgba(29,39,51,0.025) 1px,
+                      rgba(255,255,255,0.025) 0px,
+                      rgba(255,255,255,0.025) 1px,
                       transparent 1px,
                       transparent 5px
                     )
@@ -845,7 +843,7 @@ const Regalos = () => {
                   border
                 "
                 style={{
-                  borderColor: "rgba(164,134,84,0.15)",
+                  borderColor: "rgba(255,255,255,0.10)",
                 }}
               />
 
@@ -866,13 +864,13 @@ const Regalos = () => {
                   items-center
                   justify-center
                   border
-                  bg-[#FBF9F4]
+                  bg-[#0B1F3A]
                   sm:right-6
                   sm:top-6
                 "
                 style={{
                   color: palette.ink,
-                  borderColor: "rgba(164,134,84,0.42)",
+                  borderColor: "rgba(143,180,218,0.48)",
                 }}
                 whileHover={{
                   scale: 1.04,
@@ -909,7 +907,7 @@ const Regalos = () => {
                   "
                   style={{
                     color: palette.antiqueGoldDark,
-                    borderColor: "rgba(164,134,84,0.42)",
+                    borderColor: "rgba(143,180,218,0.48)",
                   }}
                 >
                   <GiftIcon />
@@ -983,7 +981,7 @@ const Regalos = () => {
                     py-8
                   "
                   style={{
-                    borderColor: "rgba(164,134,84,0.32)",
+                    borderColor: "rgba(143,180,218,0.35)",
                   }}
                 >
                   <p
@@ -1037,13 +1035,13 @@ const Regalos = () => {
                     sm:min-w-[270px]
                   "
                   style={{
-                    backgroundColor: palette.ink,
-                    borderColor: palette.ink,
-                    color: palette.paperLight,
+                    backgroundColor: palette.blue,
+                    borderColor: palette.blueLight,
+                    color: palette.white,
                   }}
                   whileHover={{
                     y: -2,
-                    backgroundColor: palette.inkSoft,
+                    backgroundColor: palette.navySoft,
                   }}
                   whileTap={{
                     scale: 0.985,

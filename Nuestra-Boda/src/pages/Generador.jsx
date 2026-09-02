@@ -1,15 +1,21 @@
 import { useState } from "react";
 
 const palette = {
-  ink: "#1D2733",
-  inkSoft: "#35404B",
-  paper: "#F5F1E8",
-  paperLight: "#FBF9F4",
-  paperDark: "#DED6C8",
-  antiqueGold: "#A48654",
-  antiqueGoldDark: "#755E39",
-  warmGray: "#777168",
-  line: "#C8BDAA",
+  ink: "#FFFFFF",
+  inkSoft: "#E6EEF7",
+  paper: "#0B1F3A",
+  paperLight: "#0B1F3A",
+  paperDark: "#0B1F3A",
+  antiqueGold: "#8FB4DA",
+  antiqueGoldDark: "#8FB4DA",
+  warmGray: "#D9E6F2",
+  line: "#5E88B5",
+  navy: "#0B1F3A",
+  navySoft: "#17365D",
+  blue: "#1E4F8A",
+  blueLight: "#8FB4DA",
+  white: "#FFFFFF",
+  black: "#161616",
 };
 
 export default function Generador() {
@@ -101,7 +107,7 @@ ${url}
 
 Será un gusto compartir este momento tan especial contigo.
 
-Valeria & Alejandro 🤍`;
+Roberto & Martha 🤍`;
 
     setMensaje(mensajeWhatsApp);
 
@@ -169,13 +175,13 @@ Valeria & Alejandro 🤍`;
         lg:px-10
       "
       style={{
-        backgroundColor: palette.paperLight,
+        backgroundColor: palette.navy,
         color: palette.ink,
         backgroundImage: `
           repeating-linear-gradient(
             0deg,
-            rgba(53,64,75,0.015) 0px,
-            rgba(53,64,75,0.015) 1px,
+            rgba(255,255,255,0.018) 0px,
+            rgba(255,255,255,0.018) 1px,
             transparent 1px,
             transparent 5px
           )
@@ -205,7 +211,7 @@ Valeria & Alejandro 🤍`;
             color: palette.antiqueGoldDark,
           }}
         >
-          Valeria & Alejandro
+          Roberto & Martha
         </p>
 
         <h1
@@ -230,7 +236,7 @@ Valeria & Alejandro 🤍`;
           "
           style={{
             backgroundColor:
-              "rgba(164,134,84,0.65)",
+              "rgba(143,180,218,0.75)",
           }}
         />
 
@@ -275,16 +281,16 @@ Valeria & Alejandro 🤍`;
           className="
             order-2
             border
-            bg-white/70
+            bg-[#17365D]/80
             p-5
-            shadow-[0_18px_50px_rgba(29,39,51,0.08)]
+            shadow-[0_18px_50px_rgba(0,0,0,0.18)]
             backdrop-blur-sm
             sm:p-8
             lg:order-1
           "
           style={{
             borderColor:
-              "rgba(164,134,84,0.28)",
+              "rgba(143,180,218,0.32)",
           }}
         >
           <div>
@@ -350,10 +356,11 @@ Valeria & Alejandro 🤍`;
                 transition
                 placeholder:text-gray-400
                 focus:ring-1
+                text-black
               "
               style={{
                 borderColor:
-                  "rgba(164,134,84,0.4)",
+                  "rgba(143,180,218,0.48)",
               }}
             />
           </div>
@@ -396,10 +403,11 @@ Valeria & Alejandro 🤍`;
                 outline-none
                 transition
                 focus:ring-1
+                text-black
               "
               style={{
                 borderColor:
-                  "rgba(164,134,84,0.4)",
+                  "rgba(143,180,218,0.48)",
               }}
             />
           </div>
@@ -423,7 +431,7 @@ Valeria & Alejandro 🤍`;
               active:scale-[0.99]
             "
             style={{
-              backgroundColor: palette.ink,
+              backgroundColor: palette.blue,
             }}
           >
             Generar invitación
@@ -451,14 +459,14 @@ Valeria & Alejandro 🤍`;
                 className="
                   break-all
                   border
-                  bg-[#F5F1E8]
+                  bg-[#17365D]
                   p-4
                   text-xs
                   leading-5
                 "
                 style={{
                   borderColor:
-                    "rgba(164,134,84,0.3)",
+                    "rgba(143,180,218,0.35)",
                   color: palette.inkSoft,
                 }}
               >
@@ -482,7 +490,7 @@ Valeria & Alejandro 🤍`;
                 "
                 style={{
                   borderColor:
-                    "rgba(29,39,51,0.4)",
+                    "rgba(143,180,218,0.55)",
                 }}
               >
                 {linkCopiado
@@ -505,7 +513,7 @@ Valeria & Alejandro 🤍`;
               "
               style={{
                 borderColor:
-                  "rgba(164,134,84,0.28)",
+                  "rgba(143,180,218,0.32)",
               }}
             >
               <p
@@ -552,10 +560,11 @@ Valeria & Alejandro 🤍`;
                   leading-6
                   outline-none
                   focus:ring-1
+                  text-black
                 "
                 style={{
                   borderColor:
-                    "rgba(164,134,84,0.35)",
+                    "rgba(143,180,218,0.42)",
                 }}
               />
 
@@ -621,7 +630,7 @@ Valeria & Alejandro 🤍`;
                 text-2xl
               "
             >
-              Valeria & Alejandro
+              Roberto & Martha
             </h2>
           </div>
 
@@ -635,18 +644,18 @@ Valeria & Alejandro 🤍`;
               border
               bg-white
               p-2
-              shadow-[0_25px_60px_rgba(29,39,51,0.14)]
+              shadow-[0_25px_60px_rgba(0,0,0,0.22)]
               sm:p-3
               lg:sticky
               lg:top-8
             "
             style={{
-              borderColor: "rgba(164,134,84,0.3)",
+              borderColor: "rgba(143,180,218,0.35)",
             }}
           >
             <img
-              src="/portada.png"
-              alt="Portada de la invitación de Valeria y Alejandro"
+              src="/portada.jpg"
+              alt="Portada de la invitación de Roberto y Martha"
               className="
                 block
                 h-auto
@@ -688,7 +697,7 @@ Valeria & Alejandro 🤍`;
                   rounded-2xl
                   bg-[#EFEAE2]
                   p-4
-                  shadow-[0_15px_40px_rgba(29,39,51,0.08)]
+                  shadow-[0_15px_40px_rgba(0,0,0,0.18)]
                 "
               >
                 <div

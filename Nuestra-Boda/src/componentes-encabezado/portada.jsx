@@ -3,19 +3,19 @@ import { AnimatePresence, motion } from "framer-motion";
 import Countdown from "./encabeza-cuenta";
 
 /* =========================================
-   PORTADA CLÁSICA EDITORIAL
+   PORTADA CLÁSICA EDITORIAL · AZUL MARINO + NARANJA
 ========================================= */
 
 const palette = {
-  ink: "#1D2733",
-  inkSoft: "#35404B",
-  paper: "#F5F1E8",
-  paperLight: "#FBF9F4",
-  paperDark: "#DED6C8",
-  antiqueGold: "#A48654",
-  antiqueGoldDark: "#755E39",
-  warmGray: "#777168",
-  line: "#C8BDAA",
+  ink: "#0B1F3A",
+  inkSoft: "#183253",
+  paper: "#F7F3EA",
+  paperLight: "#FFFDFC",
+  paperDark: "#EAE2D6",
+  antiqueGold: "#C65A1E",
+  antiqueGoldDark: "#9B3F13",
+  warmGray: "#57534E",
+  line: "#D9D0C2",
 };
 
 const transition = {
@@ -67,8 +67,8 @@ function DecorativeDivider({ dark = false }) {
         className="h-px w-10 sm:w-16"
         style={{
           background: dark
-            ? "linear-gradient(to right, transparent, rgba(164,134,84,0.8))"
-            : "linear-gradient(to right, transparent, rgba(164,134,84,0.65))",
+            ? "linear-gradient(to right, transparent, rgba(198,90,30,0.8))"
+            : "linear-gradient(to right, transparent, rgba(198,90,30,0.65))",
         }}
       />
 
@@ -76,8 +76,8 @@ function DecorativeDivider({ dark = false }) {
         className="h-[5px] w-[5px] rotate-45 border"
         style={{
           borderColor: dark
-            ? "rgba(164,134,84,0.85)"
-            : "rgba(164,134,84,0.7)",
+            ? "rgba(198,90,30,0.85)"
+            : "rgba(198,90,30,0.7)",
         }}
       />
 
@@ -85,8 +85,8 @@ function DecorativeDivider({ dark = false }) {
         className="h-px w-10 sm:w-16"
         style={{
           background: dark
-            ? "linear-gradient(to left, transparent, rgba(164,134,84,0.8))"
-            : "linear-gradient(to left, transparent, rgba(164,134,84,0.65))",
+            ? "linear-gradient(to left, transparent, rgba(198,90,30,0.8))"
+            : "linear-gradient(to left, transparent, rgba(198,90,30,0.65))",
         }}
       />
     </div>
@@ -246,14 +246,14 @@ useEffect(() => {
         overflow-hidden
       "
       style={{
-        backgroundColor: palette.paperLight,
-        color: palette.ink,
+        backgroundColor: palette.ink,
+        color: palette.paperLight,
       }}
     >
       {/* AUDIO */}
 
       <audio ref={audioRef} loop preload="auto">
-        <source src="/TylerShaw.mp3" type="audio/mpeg" />
+        <source src="/musica.mp3" type="audio/mpeg" />
       </audio>
 
       {/* =========================================
@@ -281,12 +281,12 @@ useEffect(() => {
     lg:px-12
   "
   style={{
-    backgroundColor: palette.paperLight,
+    backgroundColor: palette.ink,
     backgroundImage: `
       repeating-linear-gradient(
         0deg,
-        rgba(53,64,75,0.018) 0px,
-        rgba(53,64,75,0.018) 1px,
+        rgba(255,255,255,0.018) 0px,
+        rgba(255,255,255,0.018) 1px,
         transparent 1px,
         transparent 5px
       )
@@ -315,7 +315,7 @@ useEffect(() => {
                 lg:inset-9
               "
               style={{
-                borderColor: "rgba(164,134,84,0.3)",
+                borderColor: "rgba(198,90,30,0.55)",
               }}
             />
 
@@ -329,7 +329,7 @@ useEffect(() => {
                 lg:inset-[42px]
               "
               style={{
-                borderColor: "rgba(164,134,84,0.12)",
+                borderColor: "rgba(198,90,30,0.22)",
               }}
             />
 
@@ -341,7 +341,7 @@ useEffect(() => {
                 top-5
                 h-16
                 w-16
-                text-[#A48654]/50
+                text-[#C65A1E]/50
                 sm:left-8
                 sm:top-8
                 sm:h-20
@@ -358,7 +358,7 @@ useEffect(() => {
                 h-16
                 w-16
                 rotate-90
-                text-[#A48654]/50
+                text-[#C65A1E]/50
                 sm:right-8
                 sm:top-8
                 sm:h-20
@@ -375,7 +375,7 @@ useEffect(() => {
                 h-16
                 w-16
                 -rotate-90
-                text-[#A48654]/50
+                text-[#C65A1E]/50
                 sm:bottom-8
                 sm:left-8
                 sm:h-20
@@ -392,7 +392,7 @@ useEffect(() => {
                 h-16
                 w-16
                 rotate-180
-                text-[#A48654]/50
+                text-[#C65A1E]/50
                 sm:bottom-8
                 sm:right-8
                 sm:h-20
@@ -442,7 +442,7 @@ useEffect(() => {
                     tracking-[0.42em]
                     sm:text-[10px]
                   "
-                  style={{ color: palette.antiqueGoldDark }}
+                  style={{ color: "#FFFFFF" }}
                 >
                   Invitación de boda
                 </p>
@@ -456,7 +456,7 @@ useEffect(() => {
                     lg:w-20
                   "
                   style={{
-                    backgroundColor: "rgba(164,134,84,0.7)",
+                    backgroundColor: "rgba(198,90,30,0.7)",
                   }}
                 />
 
@@ -470,7 +470,7 @@ useEffect(() => {
                     tracking-[0.22em]
                     sm:text-sm
                   "
-                  style={{ color: palette.warmGray }}
+                  style={{ color: "rgba(255,255,255,0.72)" }}
                 >
                   Junto con nuestras familias
                 </p>
@@ -489,10 +489,17 @@ useEffect(() => {
                     lg:text-[62px]
                     xl:text-[76px]
                   "
-                  style={{ color: palette.ink }}
+                  style={{ color: palette.paperLight }}
                 >
-                  Valeria
+                  Martha
                 </h1>
+
+                <p
+                  className="mt-2 font-serif text-[9px] uppercase tracking-[0.16em] sm:text-[11px]"
+                  style={{ color: "rgba(255,255,255,0.78)" }}
+                >
+                  Martha Fátima Tercero Hernández
+                </p>
 
                 <span
                   className="
@@ -502,7 +509,7 @@ useEffect(() => {
                     text-2xl
                     sm:text-4xl
                   "
-                  style={{ color: palette.antiqueGold }}
+                  style={{ color: "#C65A1E" }}
                 >
                   &
                 </span>
@@ -519,10 +526,17 @@ useEffect(() => {
                     lg:text-[62px]
                     xl:text-[76px]
                   "
-                  style={{ color: palette.ink }}
+                  style={{ color: palette.paperLight }}
                 >
-                  Alejandro
+                  Roberto
                 </h1>
+
+                <p
+                  className="mt-2 font-serif text-[9px] uppercase tracking-[0.16em] sm:text-[11px]"
+                  style={{ color: "rgba(255,255,255,0.78)" }}
+                >
+                  Roberto López Maciel
+                </p>
 
                 <div className="mt-4 w-full max-w-[220px] sm:mt-8 sm:max-w-[260px]">
                   <DecorativeDivider />
@@ -538,9 +552,9 @@ useEffect(() => {
                     tracking-[0.32em]
                     sm:text-sm
                   "
-                  style={{ color: palette.inkSoft }}
+                  style={{ color: palette.paperLight }}
                 >
-                  11 · Junio · 2027
+                  10 · Octubre · 2026
                 </p>
 
                 <p
@@ -555,7 +569,7 @@ useEffect(() => {
                     sm:text-base
                     sm:leading-7
                   "
-                  style={{ color: palette.warmGray }}
+                  style={{ color: "rgba(255,255,255,0.72)" }}
                 >
                   Hay momentos que cambian nuestra historia para siempre.
                   Queremos compartir este con ustedes.
@@ -646,7 +660,7 @@ useEffect(() => {
                     "
                     style={{
                       backgroundColor: palette.paperLight,
-                      borderColor: "rgba(164,134,84,0.32)",
+                      borderColor: "rgba(198,90,30,0.32)",
                       boxShadow: "0 14px 30px rgba(29,39,51,0.13)",
                     }}
                     animate={
@@ -673,7 +687,7 @@ useEffect(() => {
                         top-2
                         h-10
                         w-10
-                        text-[#A48654]/35
+                        text-[#C65A1E]/35
                       "
                     />
 
@@ -685,7 +699,7 @@ useEffect(() => {
                         h-10
                         w-10
                         rotate-180
-                        text-[#A48654]/35
+                        text-[#C65A1E]/35
                       "
                     />
 
@@ -708,7 +722,7 @@ useEffect(() => {
                         w-12
                       "
                       style={{
-                        backgroundColor: "rgba(164,134,84,0.65)",
+                        backgroundColor: "rgba(198,90,30,0.65)",
                       }}
                     />
 
@@ -719,9 +733,9 @@ useEffect(() => {
                         leading-tight
                         sm:text-[25px]
                       "
-                      style={{ color: palette.ink }}
+                      style={{ color: "black" }}
                     >
-                      Valeria
+                      Martha
                     </p>
 
                     <span
@@ -743,9 +757,9 @@ useEffect(() => {
                         leading-tight
                         sm:text-[25px]
                       "
-                      style={{ color: palette.ink }}
+                      style={{ color: "black" }}
                     >
-                      Alejandro
+                      Roberto
                     </p>
 
                     <p
@@ -756,9 +770,9 @@ useEffect(() => {
                         tracking-[0.25em]
                         sm:text-[8px]
                       "
-                      style={{ color: palette.warmGray }}
+                      style={{ color: "black" }}
                     >
-                      11 · 06 · 2027
+                      10 · 10 · 2026
                     </p>
                   </motion.div>
 
@@ -773,17 +787,18 @@ useEffect(() => {
                     "
                     style={{
                       background: `
-                        linear-gradient(
-                          145deg,
-                          #E8E0D2 0%,
-                          #DCD2C1 52%,
-                          #CFC3B0 100%
-                        )
-                      `,
-                      borderColor: "rgba(117,94,57,0.25)",
+                         linear-gradient(
+                           145deg,
+                           #D9783A 0%,
+                           #C65A1E 52%,
+                           #9B3F13 100%
+                         )
+                       `,
+                      borderColor: "rgba(198,90,30,0.72)",
                       boxShadow: `
-                        0 28px 55px rgba(29,39,51,0.16),
-                        inset 0 1px 0 rgba(255,255,255,0.65)
+                        0 28px 55px rgba(0,0,0,0.32),
+                        inset 0 1px 0 rgba(255,255,255,0.12),
+                        inset 0 -1px 0 rgba(198,90,30,0.22)
                       `,
                     }}
                     animate={
@@ -810,8 +825,8 @@ useEffect(() => {
                         backgroundImage: `
                           repeating-linear-gradient(
                             90deg,
-                            rgba(53,64,75,0.08) 0px,
-                            rgba(53,64,75,0.08) 1px,
+                            rgba(255,255,255,0.055) 0px,
+                            rgba(255,255,255,0.055) 1px,
                             transparent 1px,
                             transparent 5px
                           )
@@ -832,9 +847,9 @@ useEffect(() => {
                       "
                       style={{
                         clipPath: "polygon(0 0, 100% 100%, 0 100%)",
-                        borderColor: "rgba(117,94,57,0.15)",
+                        borderColor: "rgba(198,90,30,0.48)",
                         background:
-                          "linear-gradient(145deg, rgba(255,255,255,0.16), transparent)",
+                          "linear-gradient(145deg, rgba(198,90,30,0.32), rgba(11,31,58,0.06) 72%)",
                       }}
                     />
 
@@ -849,9 +864,9 @@ useEffect(() => {
                       "
                       style={{
                         clipPath: "polygon(100% 0, 100% 100%, 0 100%)",
-                        borderColor: "rgba(117,94,57,0.15)",
+                        borderColor: "rgba(198,90,30,0.48)",
                         background:
-                          "linear-gradient(215deg, rgba(255,255,255,0.12), transparent)",
+                          "linear-gradient(215deg, rgba(198,90,30,0.22), rgba(11,31,58,0.04) 72%)",
                       }}
                     />
                   </motion.div>
@@ -874,11 +889,12 @@ useEffect(() => {
                       background: `
                         linear-gradient(
                           180deg,
-                          #E6DDCE 0%,
-                          #D5C9B7 100%
+                          #D96B2B 0%,
+                          #C65A1E 48%,
+                          #9B3F13 100%
                         )
                       `,
-                      boxShadow: "0 13px 24px rgba(29,39,51,0.12)",
+                      boxShadow: "0 13px 26px rgba(0,0,0,0.28)",
                       backfaceVisibility: "hidden",
                     }}
                     animate={
@@ -943,15 +959,16 @@ useEffect(() => {
                         background: `
                           radial-gradient(
                             circle at 35% 28%,
-                            #B59A68 0%,
-                            #927545 45%,
-                            #6D5532 100%
+                            #244A78 0%,
+                            #0B1F3A 52%,
+                            #061224 100%
                           )
                         `,
+                        border: "2px solid rgba(198,90,30,0.82)",
                         boxShadow: `
-                          inset 0 2px 4px rgba(255,255,255,0.24),
-                          inset 0 -5px 9px rgba(45,34,19,0.28),
-                          0 10px 18px rgba(29,39,51,0.17)
+                          inset 0 2px 4px rgba(255,255,255,0.16),
+                          inset 0 -5px 9px rgba(0,0,0,0.26),
+                          0 10px 20px rgba(0,0,0,0.30)
                         `,
                       }}
                     >
@@ -963,7 +980,7 @@ useEffect(() => {
                           border
                         "
                         style={{
-                          borderColor: "rgba(245,241,232,0.28)",
+                          borderColor: "rgba(198,90,30,0.58)",
                         }}
                       />
 
@@ -977,15 +994,15 @@ useEffect(() => {
                           sm:text-2xl
                         "
                         style={{
-                          color: "#E8DDCA",
+                          color: "#FFFDFC",
                           textShadow: "0 1px 2px rgba(29,39,51,0.35)",
                         }}
                       >
-                        V
+                        R
                         <span className="mx-1 text-[11px] sm:text-sm">
                           &
                         </span>
-                        A
+                        M
                       </div>
                     </div>
                   </motion.div>
@@ -1005,7 +1022,7 @@ useEffect(() => {
                       tracking-[0.4em]
                       sm:text-[9px]
                     "
-                    style={{ color: palette.inkSoft }}
+                    style={{ color: palette.paperLight }}
                     animate={{
                       opacity: abrirSobre ? 0 : 0.75,
                     }}
@@ -1025,7 +1042,7 @@ useEffect(() => {
                     sm:mt-7
                     sm:text-[10px]
                   "
-                  style={{ color: palette.warmGray }}
+                  style={{ color: "rgba(255,255,255,0.72)" }}
                   animate={{
                     opacity: abrirSobre ? 0 : 1,
                   }}
@@ -1051,7 +1068,7 @@ useEffect(() => {
                     sm:py-5
                   "
                   style={{
-                    borderColor: "rgba(164,134,84,0.35)",
+                    borderColor: "rgba(198,90,30,0.35)",
                   }}
                   initial={{ opacity: 0, y: 14 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -1067,7 +1084,7 @@ useEffect(() => {
                       tracking-[0.33em]
                       sm:text-[9px]
                     "
-                    style={{ color: palette.warmGray }}
+                    style={{ color: "rgba(255,255,255,0.7)" }}
                   >
                     Reservado especialmente para
                   </p>
@@ -1081,7 +1098,7 @@ useEffect(() => {
                       text-lg
                       sm:text-2xl
                     "
-                    style={{ color: palette.ink }}
+                    style={{ color: palette.paperLight }}
                   >
                     {invitados}
                   </p>
@@ -1095,7 +1112,7 @@ useEffect(() => {
                       w-12
                     "
                     style={{
-                      backgroundColor: "rgba(164,134,84,0.6)",
+                      backgroundColor: "rgba(198,90,30,0.6)",
                     }}
                   />
 
@@ -1106,7 +1123,7 @@ useEffect(() => {
                       tracking-[0.08em]
                       sm:text-base
                     "
-                    style={{ color: palette.inkSoft }}
+                    style={{ color: "rgba(255,255,255,0.9)" }}
                   >
                     {pases}{" "}
                     {pases === 1
@@ -1136,8 +1153,8 @@ useEffect(() => {
         {/* FOTOGRAFÍA */}
 
         <motion.img
-          src="/portada.png"
-          alt="Valeria y Alejandro"
+          src="/portada.jpg"
+          alt="Roberto López Maciel y Martha Fátima Tercero Hernández"
           className="
             absolute
             inset-0
@@ -1170,34 +1187,6 @@ useEffect(() => {
           }}
         />
 
-        {/* OVERLAY CINEMATOGRÁFICO DISCRETO */}
-
-        <motion.div
-          className="absolute inset-0"
-          style={{
-            background: `
-              linear-gradient(
-                180deg,
-                rgba(18,24,31,0.46) 0%,
-                rgba(18,24,31,0.12) 32%,
-                rgba(18,24,31,0.20) 54%,
-                rgba(18,24,31,0.82) 100%
-              ),
-              linear-gradient(
-                90deg,
-                rgba(18,24,31,0.18) 0%,
-                transparent 35%,
-                transparent 65%,
-                rgba(18,24,31,0.18) 100%
-              )
-            `,
-          }}
-          initial={{ opacity: 0 }}
-          animate={{
-            opacity: mostrarContenido ? 1 : 0,
-          }}
-          transition={{ duration: 1 }}
-        />
 
         {/* GRANO EDITORIAL */}
 
@@ -1357,7 +1346,7 @@ lg:pt-20
                 textShadow: "0 4px 24px rgba(0,0,0,0.32)",
               }}
             >
-              Valeria
+              Martha
             </h1>
 
             <div className="my-2 flex items-center gap-3 sm:my-4 sm:gap-6">
@@ -1369,7 +1358,7 @@ lg:pt-20
                 "
                 style={{
                   background:
-                    "linear-gradient(to right, transparent, rgba(216,198,166,0.8))",
+                    "linear-gradient(to right, transparent, rgba(198,90,30,0.9))",
                 }}
               />
 
@@ -1377,7 +1366,7 @@ lg:pt-20
                 className="
                   font-cursiveDancing
                   text-2xl
-                  text-[#D8C6A6]
+                  text-[#C65A1E]
                   sm:text-4xl
                 "
               >
@@ -1392,7 +1381,7 @@ lg:pt-20
                 "
                 style={{
                   background:
-                    "linear-gradient(to left, transparent, rgba(216,198,166,0.8))",
+                    "linear-gradient(to left, transparent, rgba(198,90,30,0.9))",
                 }}
               />
             </div>
@@ -1413,7 +1402,7 @@ lg:pt-20
                 textShadow: "0 4px 24px rgba(0,0,0,0.32)",
               }}
             >
-              Alejandro
+              Roberto
             </h1>
 
           </motion.div>
@@ -1448,7 +1437,7 @@ lg:pt-20
             }}
           >
 
-            <Countdown targetDate="2027-06-11T00:00:00" />
+            <Countdown targetDate="2026-10-10T00:00:00" />
 
             <motion.div
               className="

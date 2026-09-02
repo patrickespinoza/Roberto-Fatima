@@ -6,31 +6,23 @@ import { useEffect, useMemo, useState } from "react";
 ========================================= */
 
 const API_URL =
-  "https://script.google.com/macros/s/AKfycbxklU9PTlqxkcu9pBUfWYhByQZ_7kJWuFENeeQhlEW-C6eh2cVbTK3z2AbMJiWVL1ME/exec";
+  "https://script.google.com/macros/s/AKfycbxLG3ne_eUekKKHt20YlciIb5_IpJkc38TEOmMtHZ-AEvxunzrvsCQgov-54L1czwmaUQ/exec";
 
-/*
-  Coloca los números con código de país, sin:
-  +, espacios, guiones ni paréntesis.
 
-  Ejemplo México:
-  5215512345678
-*/
-
-const NUMERO_NOVIA = "521XXXXXXXXXX";
-const NUMERO_NOVIO = "521XXXXXXXXXX";
-
-const NOMBRE_NOVIA = "Allison";
-const NOMBRE_NOVIO = "David";
+const NUMERO_WHATSAPP = "525611188682";
+const NOMBRE_CONTACTO = "Roberto y Martha";
 
 const palette = {
-  ink: "#1D2733",
-  inkSoft: "#39434D",
-  paper: "#F5F1E8",
-  paperLight: "#FBF9F4",
-  paperDark: "#E5DED2",
-  antiqueGold: "#A48654",
-  antiqueGoldDark: "#725B37",
-  warmGray: "#777168",
+  ink: "#161616",
+  inkSoft: "#333333",
+  paper: "#FFFFFF",
+  paperLight: "#FFFFFF",
+  paperDark: "#FFFFFF",
+  orange: "#C65A1E",
+  orangeDark: "#9B3F13",
+  antiqueGold: "#C65A1E",
+  antiqueGoldDark: "#C65A1E",
+  warmGray: "#555555",
   error: "#8B3A3A",
   success: "#49644D",
 };
@@ -244,14 +236,14 @@ function DecorativeDivider({ compact = false }) {
         className={compact ? "h-px w-8 sm:w-12" : "h-px w-10 sm:w-16"}
         style={{
           background:
-            "linear-gradient(to right, transparent, rgba(164,134,84,0.72))",
+            "linear-gradient(to right, transparent, rgba(198,90,30,0.72))",
         }}
       />
 
       <span
         className="h-[5px] w-[5px] rotate-45 border"
         style={{
-          borderColor: "rgba(164,134,84,0.72)",
+          borderColor: "rgba(198,90,30,0.72)",
         }}
       />
 
@@ -259,7 +251,7 @@ function DecorativeDivider({ compact = false }) {
         className={compact ? "h-px w-8 sm:w-12" : "h-px w-10 sm:w-16"}
         style={{
           background:
-            "linear-gradient(to left, transparent, rgba(164,134,84,0.72))",
+            "linear-gradient(to left, transparent, rgba(198,90,30,0.72))",
         }}
       />
     </div>
@@ -370,11 +362,11 @@ function AttendanceOption({
       "
       style={{
         backgroundColor: isSelected
-          ? "rgba(29,39,51,0.055)"
+          ? "rgba(198,90,30,0.055)"
           : palette.paperLight,
         borderColor: isSelected
           ? palette.antiqueGold
-          : "rgba(164,134,84,0.3)",
+          : "rgba(198,90,30,0.30)",
       }}
     >
       <input
@@ -473,7 +465,7 @@ const Confirmacion = () => {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
 
-    const encodedId = params.get("id");
+    const encodedId = params.get("id") || params.get("data");
     const visibleName = params.get("nombre");
     const visiblePasses = params.get("pases");
 
@@ -644,10 +636,10 @@ const Confirmacion = () => {
     const confirmationData = {
       nombre: nombreInvitado.trim(),
       asistencia,
-      invitados: asistencia === "Sí asistiré" ? invitados : 0,
+      invitadosConfirmados:
+        asistencia === "Sí asistiré" ? invitados : 0,
+      numeroPases: pasesAsignados,
       mensaje: mensajeInvitado.trim(),
-      lado: side,
-      pasesAsignados,
     };
 
     try {
@@ -715,14 +707,7 @@ const Confirmacion = () => {
         lg:py-32
       "
       style={{
-        background: `
-          linear-gradient(
-            180deg,
-            ${palette.paperLight} 0%,
-            ${palette.paper} 56%,
-            ${palette.paperDark} 100%
-          )
-        `,
+        backgroundColor: "#FFFFFF",
       }}
     >
       {/* TEXTURA */}
@@ -738,8 +723,8 @@ const Confirmacion = () => {
           backgroundImage: `
             repeating-linear-gradient(
               0deg,
-              rgba(29,39,51,0.025) 0px,
-              rgba(29,39,51,0.025) 1px,
+              rgba(198,90,30,0.018) 0px,
+              rgba(198,90,30,0.018) 1px,
               transparent 1px,
               transparent 5px
             )
@@ -759,7 +744,7 @@ const Confirmacion = () => {
           lg:inset-10
         "
         style={{
-          borderColor: "rgba(164,134,84,0.25)",
+          borderColor: "rgba(198,90,30,0.25)",
         }}
       />
 
@@ -773,7 +758,7 @@ const Confirmacion = () => {
           lg:inset-[46px]
         "
         style={{
-          borderColor: "rgba(164,134,84,0.1)",
+          borderColor: "rgba(198,90,30,0.10)",
         }}
       />
 
@@ -787,7 +772,7 @@ const Confirmacion = () => {
           top-6
           h-16
           w-16
-          text-[#A48654]/25
+          text-[#C65A1E]/25
           sm:left-9
           sm:top-9
           sm:h-20
@@ -804,7 +789,7 @@ const Confirmacion = () => {
           h-16
           w-16
           rotate-90
-          text-[#A48654]/25
+          text-[#C65A1E]/25
           sm:right-9
           sm:top-9
           sm:h-20
@@ -821,7 +806,7 @@ const Confirmacion = () => {
           h-16
           w-16
           -rotate-90
-          text-[#A48654]/25
+          text-[#C65A1E]/25
           sm:bottom-9
           sm:left-9
           sm:h-20
@@ -838,7 +823,7 @@ const Confirmacion = () => {
           h-16
           w-16
           rotate-180
-          text-[#A48654]/25
+          text-[#C65A1E]/25
           sm:bottom-9
           sm:right-9
           sm:h-20
@@ -857,7 +842,7 @@ const Confirmacion = () => {
           h-[250px]
           w-[145px]
           -rotate-12
-          text-[#A48654]/10
+          text-[#C65A1E]/10
           sm:h-[310px]
           sm:w-[180px]
           lg:left-2
@@ -873,7 +858,7 @@ const Confirmacion = () => {
           h-[250px]
           w-[145px]
           rotate-[168deg]
-          text-[#A48654]/10
+          text-[#C65A1E]/10
           sm:h-[310px]
           sm:w-[180px]
           lg:right-2
@@ -927,7 +912,7 @@ const Confirmacion = () => {
             "
             style={{
               color: palette.antiqueGoldDark,
-              borderColor: "rgba(164,134,84,0.42)",
+              borderColor: "rgba(198,90,30,0.42)",
             }}
           >
             <EnvelopeIcon />
@@ -965,7 +950,7 @@ const Confirmacion = () => {
               md:text-[64px]
             "
             style={{
-              color: palette.ink,
+              color: palette.orange,
             }}
           >
             Confirmación de asistencia
@@ -1007,8 +992,8 @@ const Confirmacion = () => {
             md:px-14
           "
           style={{
-            backgroundColor: "rgba(251,249,244,0.84)",
-            borderColor: "rgba(164,134,84,0.34)",
+            backgroundColor: "rgba(255,255,255,0.96)",
+            borderColor: "rgba(198,90,30,0.34)",
             boxShadow: "0 24px 65px rgba(29,39,51,0.08)",
           }}
           initial={{
@@ -1037,7 +1022,7 @@ const Confirmacion = () => {
               border
             "
             style={{
-              borderColor: "rgba(164,134,84,0.12)",
+              borderColor: "rgba(198,90,30,0.12)",
             }}
           />
 
@@ -1098,7 +1083,7 @@ const Confirmacion = () => {
                   mt-4
                   w-full
                   border
-                  bg-[#FBF9F4]
+                  bg-white
                   px-5
                   py-4
                   font-serif
@@ -1108,7 +1093,7 @@ const Confirmacion = () => {
                 "
                 style={{
                   color: palette.ink,
-                  borderColor: "rgba(164,134,84,0.34)",
+                  borderColor: "rgba(198,90,30,0.34)",
                   cursor: datosDesdeGenerador ? "not-allowed" : "text",
                 }}
               />
@@ -1151,7 +1136,7 @@ const Confirmacion = () => {
                 pt-9
               "
               style={{
-                borderColor: "rgba(164,134,84,0.26)",
+                borderColor: "rgba(198,90,30,0.26)",
               }}
             >
               <p
@@ -1205,7 +1190,7 @@ const Confirmacion = () => {
                     pt-9
                   "
                   style={{
-                    borderColor: "rgba(164,134,84,0.26)",
+                    borderColor: "rgba(198,90,30,0.26)",
                   }}
                   initial={{
                     opacity: 0,
@@ -1261,7 +1246,7 @@ const Confirmacion = () => {
                       w-full
                       appearance-none
                       border
-                      bg-[#FBF9F4]
+                      bg-white
                       px-5
                       py-4
                       text-center
@@ -1272,7 +1257,7 @@ const Confirmacion = () => {
                     "
                     style={{
                       color: palette.ink,
-                      borderColor: "rgba(164,134,84,0.34)",
+                      borderColor: "rgba(198,90,30,0.34)",
                     }}
                   >
                     {availablePasses.map((passNumber) => (
@@ -1314,7 +1299,7 @@ const Confirmacion = () => {
                 pt-9
               "
               style={{
-                borderColor: "rgba(164,134,84,0.26)",
+                borderColor: "rgba(198,90,30,0.26)",
               }}
             >
               <label
@@ -1346,7 +1331,7 @@ const Confirmacion = () => {
                   w-full
                   resize-none
                   border
-                  bg-[#FBF9F4]
+                  bg-white
                   px-5
                   py-4
                   font-serif
@@ -1357,7 +1342,7 @@ const Confirmacion = () => {
                 "
                 style={{
                   color: palette.ink,
-                  borderColor: "rgba(164,134,84,0.34)",
+                  borderColor: "rgba(198,90,30,0.34)",
                 }}
               />
 
@@ -1452,49 +1437,44 @@ const Confirmacion = () => {
               )}
             </AnimatePresence>
 
-            {/* BOTONES */}
+            {/* BOTÓN ÚNICO DE WHATSAPP */}
 
-            <div
-              className="
-                mt-9
-                grid
-                gap-3
-                sm:grid-cols-2
-              "
-            >
+            <div className="mt-9 flex justify-center">
               <motion.button
                 type="button"
                 onClick={() =>
                   enviarConfirmacion({
-                    side: "Novia",
-                    phoneNumber: NUMERO_NOVIA,
-                    recipientName: NOMBRE_NOVIA,
+                    side: "General",
+                    phoneNumber: NUMERO_WHATSAPP,
+                    recipientName: NOMBRE_CONTACTO,
                   })
                 }
                 disabled={Boolean(loadingSide)}
                 className="
                   inline-flex
                   min-h-[58px]
+                  w-full
+                  max-w-md
                   items-center
                   justify-center
                   gap-3
                   border
-                  px-5
+                  px-6
                   py-4
                   disabled:cursor-not-allowed
                   disabled:opacity-60
                 "
                 style={{
-                  backgroundColor: palette.ink,
-                  borderColor: palette.ink,
-                  color: palette.paperLight,
+                  backgroundColor: palette.orange,
+                  borderColor: palette.orange,
+                  color: "#FFFFFF",
                 }}
                 whileHover={
                   loadingSide
                     ? undefined
                     : {
                         y: -2,
-                        backgroundColor: palette.inkSoft,
+                        backgroundColor: palette.orangeDark,
                       }
                 }
                 whileTap={
@@ -1505,7 +1485,7 @@ const Confirmacion = () => {
                       }
                 }
               >
-                {loadingSide === "Novia" ? (
+                {loadingSide === "General" ? (
                   <span
                     className="
                       h-4
@@ -1529,82 +1509,9 @@ const Confirmacion = () => {
                     sm:text-[9px]
                   "
                 >
-                  {loadingSide === "Novia"
+                  {loadingSide === "General"
                     ? "Enviando"
-                    : `Confirmar con ${NOMBRE_NOVIA}`}
-                </span>
-              </motion.button>
-
-              <motion.button
-                type="button"
-                onClick={() =>
-                  enviarConfirmacion({
-                    side: "Novio",
-                    phoneNumber: NUMERO_NOVIO,
-                    recipientName: NOMBRE_NOVIO,
-                  })
-                }
-                disabled={Boolean(loadingSide)}
-                className="
-                  inline-flex
-                  min-h-[58px]
-                  items-center
-                  justify-center
-                  gap-3
-                  border
-                  px-5
-                  py-4
-                  disabled:cursor-not-allowed
-                  disabled:opacity-60
-                "
-                style={{
-                  backgroundColor: palette.paperLight,
-                  borderColor: palette.ink,
-                  color: palette.ink,
-                }}
-                whileHover={
-                  loadingSide
-                    ? undefined
-                    : {
-                        y: -2,
-                        backgroundColor: palette.paper,
-                      }
-                }
-                whileTap={
-                  loadingSide
-                    ? undefined
-                    : {
-                        scale: 0.985,
-                      }
-                }
-              >
-                {loadingSide === "Novio" ? (
-                  <span
-                    className="
-                      h-4
-                      w-4
-                      animate-spin
-                      rounded-full
-                      border-2
-                      border-[#1D2733]/25
-                      border-t-[#1D2733]
-                    "
-                  />
-                ) : (
-                  <WhatsAppIcon />
-                )}
-
-                <span
-                  className="
-                    text-[8px]
-                    uppercase
-                    tracking-[0.24em]
-                    sm:text-[9px]
-                  "
-                >
-                  {loadingSide === "Novio"
-                    ? "Enviando"
-                    : `Confirmar con ${NOMBRE_NOVIO}`}
+                    : "Confirmar asistencia"}
                 </span>
               </motion.button>
             </div>

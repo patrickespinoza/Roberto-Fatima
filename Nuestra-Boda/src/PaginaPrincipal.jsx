@@ -4,12 +4,11 @@ import ItinerarioRelojCentral from "./componentes-encabezado/Itinerario";
 import Preguntas from "./componentes-encabezado/Preguntas";
 import Regalos from "./componentes-encabezado/Regalos";
 import Confirmacion from "./componentes-encabezado/Confirmacion";
-import FrasePremium from "./componentes-encabezado/FrasePrincipal";
 import EventoDireccion from "./componentes-encabezado/Ubicacion";
 import DressCodePremium from "./componentes-encabezado/codigovestimenta";
 import Galeria from "./componentes-encabezado/Galeria";
-import FraseModal from "./componentes-encabezado/Fraseintermedia";
 import Album from "./componentes-encabezado/albun";
+import FamiliaYPadrinos from "./componentes-encabezado/familia";
 
 
 export default function PaginaPrincipal() {
@@ -47,7 +46,7 @@ export default function PaginaPrincipal() {
   return (
     <div >
 
-<FrasePremium/>
+<FamiliaYPadrinos/>
 
 <EventoDireccion/>
 
@@ -55,7 +54,6 @@ export default function PaginaPrincipal() {
 
 <ItinerarioRelojCentral/>
   
-<FraseModal/> 
 
 <DressCodePremium/>
 

@@ -8,49 +8,45 @@ import html2canvas from "html2canvas";
 ========================================= */
 
 const API_URL =
-  "https://script.google.com/macros/s/AKfycbxQTHIUXU3wWSw_mg7wvwbjwLbzskGcgGaGKzuY_yUK1r-RfPfXtSB7WD4CfZ6W7f5QJg/exec";
+  "https://script.google.com/macros/s/AKfycbxLG3ne_eUekKKHt20YlciIb5_IpJkc38TEOmMtHZ-AEvxunzrvsCQgov-54L1czwmaUQ/exec";
 
 const palette = {
-  ink: "#1D2733",
-  inkSoft: "#39434D",
-  paper: "#F5F1E8",
-  paperLight: "#FBF9F4",
-  paperDark: "#E5DED2",
-  antiqueGold: "#A48654",
-  antiqueGoldDark: "#725B37",
-  warmGray: "#777168",
+  ink: "#161616",
+  inkSoft: "#2F2F2F",
+  paper: "#FFFFFF",
+  paperLight: "#FFFFFF",
+  paperDark: "#FFFFFF",
+  orange: "#C65A1E",
+  orangeDark: "#9B3F13",
+  antiqueGold: "#C65A1E",
+  antiqueGoldDark: "#C65A1E",
+  warmGray: "#4A4A4A",
 };
 
 const preguntas = [
   {
-    pregunta: "¿Dónde se conocieron Valeria y Alejandro?",
-    opciones: [
-      "En la Universidad",
-      "En una Fiesta",
-      "En el trabajo",
-      "Por una app",
-      "En un viaje",
-    ],
-    correcta: 0,
-  },
-  {
-    pregunta: "¿Quién dijo “te amo” primero?",
-    opciones: ["Valeria", "Alejandro", "Ambos", "Nadie", "Fue un accidente"],
-    correcta: 1,
-  },
-  {
-    pregunta: "¿Cuál es su comida favorita?",
-    opciones: ["Pizza", "Sushi", "Tacos", "Pasta", "Hamburguesas"],
-    correcta: 2,
-  },
-  {
-    pregunta: "¿Dónde fue su primera cita?",
-    opciones: ["Cine", "Restaurante", "Parque", "Café", "Playa"],
+    pregunta: "¿En dónde se conocieron los novios?",
+    opciones: ["En la universidad", "En la iglesia", "En la prepa", "En una fiesta"],
     correcta: 3,
   },
   {
-    pregunta: "¿Quién es más puntual?",
-    opciones: ["Valeria", "Alejandro", "Ambos", "Ninguno", "Depende del día"],
+    pregunta: "¿Cuántos años llevan de novios?",
+    opciones: ["3 años", "6 años", "10 años", "Se acaban de conocer"],
+    correcta: 1,
+  },
+  {
+    pregunta: "¿Quién dijo primero ‘te amo’?",
+    opciones: ["Roberto", "Fátima"],
+    correcta: 0,
+  },
+  {
+    pregunta: "¿Cuántos hijos quieren tener los novios?",
+    opciones: ["2 hijos", "3 hijos", "4 hijos", "6 hijos"],
+    correcta: 2,
+  },
+  {
+    pregunta: "¿Quién enamoró primero a quién?",
+    opciones: ["Roberto a Fátima", "Fátima a Roberto"],
     correcta: 0,
   },
 ];
@@ -182,14 +178,14 @@ function DecorativeDivider({ compact = false }) {
         className={compact ? "h-px w-8 sm:w-12" : "h-px w-10 sm:w-16"}
         style={{
           background:
-            "linear-gradient(to right, transparent, rgba(164,134,84,0.72))",
+            "linear-gradient(to right, transparent, rgba(198,90,30,0.72))",
         }}
       />
 
       <span
         className="h-[5px] w-[5px] rotate-45 border"
         style={{
-          borderColor: "rgba(164,134,84,0.72)",
+          borderColor: "rgba(198,90,30,0.72)",
         }}
       />
 
@@ -197,7 +193,7 @@ function DecorativeDivider({ compact = false }) {
         className={compact ? "h-px w-8 sm:w-12" : "h-px w-10 sm:w-16"}
         style={{
           background:
-            "linear-gradient(to left, transparent, rgba(164,134,84,0.72))",
+            "linear-gradient(to left, transparent, rgba(198,90,30,0.72))",
         }}
       />
     </div>
@@ -362,12 +358,12 @@ function PodiumPlace({ participant, place }) {
         style={{
           background:
             place === 1
-              ? "linear-gradient(180deg, #E6DDCE, #D7CAB5)"
-              : "linear-gradient(180deg, #F5F1E8, #E5DED2)",
+              ? "linear-gradient(180deg, #FFFFFF, #FFFFFF)"
+              : "linear-gradient(180deg, #FFFFFF, #FFFFFF)",
           borderColor:
             place === 1
-              ? "rgba(164,134,84,0.55)"
-              : "rgba(164,134,84,0.3)",
+              ? "rgba(198,90,30,0.55)"
+              : "rgba(198,90,30,0.3)",
         }}
       >
         <span
@@ -672,8 +668,8 @@ const Preguntas = () => {
           backgroundImage: `
             repeating-linear-gradient(
               0deg,
-              rgba(29,39,51,0.025) 0px,
-              rgba(29,39,51,0.025) 1px,
+              rgba(198,90,30,0.018) 0px,
+              rgba(198,90,30,0.018) 1px,
               transparent 1px,
               transparent 5px
             )
@@ -693,7 +689,7 @@ const Preguntas = () => {
           lg:inset-10
         "
         style={{
-          borderColor: "rgba(164,134,84,0.25)",
+          borderColor: "rgba(198,90,30,0.25)",
         }}
       />
 
@@ -707,7 +703,7 @@ const Preguntas = () => {
           lg:inset-[46px]
         "
         style={{
-          borderColor: "rgba(164,134,84,0.1)",
+          borderColor: "rgba(198,90,30,0.1)",
         }}
       />
 
@@ -721,7 +717,7 @@ const Preguntas = () => {
           top-6
           h-16
           w-16
-          text-[#A48654]/25
+          text-[#C65A1E]/25
           sm:left-9
           sm:top-9
           sm:h-20
@@ -738,7 +734,7 @@ const Preguntas = () => {
           h-16
           w-16
           rotate-90
-          text-[#A48654]/25
+          text-[#C65A1E]/25
           sm:right-9
           sm:top-9
           sm:h-20
@@ -755,7 +751,7 @@ const Preguntas = () => {
           h-16
           w-16
           -rotate-90
-          text-[#A48654]/25
+          text-[#C65A1E]/25
           sm:bottom-9
           sm:left-9
           sm:h-20
@@ -772,7 +768,7 @@ const Preguntas = () => {
           h-16
           w-16
           rotate-180
-          text-[#A48654]/25
+          text-[#C65A1E]/25
           sm:bottom-9
           sm:right-9
           sm:h-20
@@ -791,7 +787,7 @@ const Preguntas = () => {
           h-[250px]
           w-[145px]
           -rotate-12
-          text-[#A48654]/10
+          text-[#C65A1E]/10
           sm:h-[310px]
           sm:w-[180px]
           lg:left-2
@@ -807,7 +803,7 @@ const Preguntas = () => {
           h-[250px]
           w-[145px]
           rotate-[168deg]
-          text-[#A48654]/10
+          text-[#C65A1E]/10
           sm:h-[310px]
           sm:w-[180px]
           lg:right-2
@@ -863,7 +859,7 @@ const Preguntas = () => {
             "
             style={{
               color: palette.antiqueGoldDark,
-              borderColor: "rgba(164,134,84,0.42)",
+              borderColor: "rgba(198,90,30,0.42)",
             }}
           >
             {terminado ? <TrophyIcon /> : <QuestionIcon />}
@@ -901,7 +897,7 @@ const Preguntas = () => {
               md:text-[64px]
             "
             style={{
-              color: palette.ink,
+              color: palette.orange,
             }}
           >
             ¿Cuánto nos conoces?
@@ -938,9 +934,9 @@ const Preguntas = () => {
             border
           "
           style={{
-            backgroundColor: "rgba(251,249,244,0.82)",
-            borderColor: "rgba(164,134,84,0.34)",
-            boxShadow: "0 24px 65px rgba(29,39,51,0.08)",
+            backgroundColor: "rgba(255,255,255,0.82)",
+            borderColor: "rgba(198,90,30,0.34)",
+            boxShadow: "0 24px 65px rgba(155,63,19,0.08)",
           }}
         >
           <div
@@ -951,7 +947,7 @@ const Preguntas = () => {
               border
             "
             style={{
-              borderColor: "rgba(164,134,84,0.12)",
+              borderColor: "rgba(198,90,30,0.12)",
             }}
           />
 
@@ -1031,7 +1027,7 @@ const Preguntas = () => {
                       overflow-hidden
                     "
                     style={{
-                      backgroundColor: "rgba(164,134,84,0.18)",
+                      backgroundColor: "rgba(198,90,30,0.18)",
                     }}
                   >
                     <motion.div
@@ -1099,7 +1095,7 @@ const Preguntas = () => {
                           mt-4
                           w-full
                           border
-                          bg-[#FBF9F4]
+                          bg-white
                           px-5
                           py-4
                           text-center
@@ -1111,7 +1107,7 @@ const Preguntas = () => {
                         "
                         style={{
                           color: palette.ink,
-                          borderColor: "rgba(164,134,84,0.34)",
+                          borderColor: "rgba(198,90,30,0.34)",
                         }}
                         onFocus={(event) => {
                           event.currentTarget.style.borderColor =
@@ -1119,7 +1115,7 @@ const Preguntas = () => {
                         }}
                         onBlur={(event) => {
                           event.currentTarget.style.borderColor =
-                            "rgba(164,134,84,0.34)";
+                            "rgba(198,90,30,0.34)";
                         }}
                       />
                     </motion.div>
@@ -1181,11 +1177,11 @@ const Preguntas = () => {
                         "
                         style={{
                           backgroundColor: isSelected
-                            ? palette.ink
+                            ? palette.orange
                             : palette.paperLight,
                           borderColor: isSelected
-                            ? palette.ink
-                            : "rgba(164,134,84,0.3)",
+                            ? palette.orange
+                            : "rgba(198,90,30,0.3)",
                           color: isSelected
                             ? palette.paperLight
                             : palette.inkSoft,
@@ -1214,7 +1210,7 @@ const Preguntas = () => {
                           "
                           style={{
                             color: isSelected
-                              ? "rgba(251,249,244,0.68)"
+                              ? "rgba(255,255,255,0.68)"
                               : palette.antiqueGoldDark,
                           }}
                         >
@@ -1281,7 +1277,7 @@ const Preguntas = () => {
                   "
                   style={{
                     color: palette.antiqueGoldDark,
-                    borderColor: "rgba(164,134,84,0.42)",
+                    borderColor: "rgba(198,90,30,0.42)",
                   }}
                 >
                   <TrophyIcon />
@@ -1363,7 +1359,7 @@ const Preguntas = () => {
                     pt-9
                   "
                   style={{
-                    borderColor: "rgba(164,134,84,0.3)",
+                    borderColor: "rgba(198,90,30,0.3)",
                   }}
                 >
                   <p
