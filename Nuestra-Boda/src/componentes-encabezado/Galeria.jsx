@@ -47,7 +47,7 @@ const images = [
   {
     src: "/Carrusel03.jpeg",
     mobilePosition: "10% 50%",
-    desktopPosition: "50% 50%",
+    desktopPosition: "50% 20%",
   },
   {
     src: "/Carrusel04.jpeg",
