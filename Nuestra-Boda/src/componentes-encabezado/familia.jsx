@@ -23,13 +23,13 @@ const familias = [
     label: "Padres del novio",
     nombres: [
       "Rafael López Alonso",
-      "Noemi Maciel Meecado",
+      "Noemí Maciel Mercado",
     ],
   },
   {
     label: "Padres de la novia",
     nombres: [
-      "Concepción Tercero Hernandez",
+      "Concepción Tercero Hernández",
       "Jorge Tercero Gonzalez",
     ],
   },

@@ -491,14 +491,14 @@ useEffect(() => {
                   "
                   style={{ color: palette.paperLight }}
                 >
-                  Martha
+                  Fatima
                 </h1>
 
                 <p
                   className="mt-2 font-serif text-[9px] uppercase tracking-[0.16em] sm:text-[11px]"
                   style={{ color: "rgba(255,255,255,0.78)" }}
                 >
-                  Martha Fátima Tercero Hernández
+                  Fatima Fátima Tercero Hernández
                 </p>
 
                 <span
@@ -735,7 +735,7 @@ useEffect(() => {
                       "
                       style={{ color: "black" }}
                     >
-                      Martha
+                      Fatima
                     </p>
 
                     <span
@@ -1154,7 +1154,7 @@ useEffect(() => {
 
         <motion.img
           src="/portada.jpg"
-          alt="Roberto López Maciel y Martha Fátima Tercero Hernández"
+          alt="Roberto López Maciel y Fatima Fátima Tercero Hernández"
           className="
             absolute
             inset-0
@@ -1346,7 +1346,7 @@ lg:pt-20
                 textShadow: "0 4px 24px rgba(0,0,0,0.32)",
               }}
             >
-              Martha
+              Fatima
             </h1>
 
             <div className="my-2 flex items-center gap-3 sm:my-4 sm:gap-6">
