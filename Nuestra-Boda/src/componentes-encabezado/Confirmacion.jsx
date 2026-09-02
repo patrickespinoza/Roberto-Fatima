@@ -83,7 +83,7 @@ function decodeBase64Utf8(value) {
     );
 
     return new TextDecoder("utf-8", {
-      fatal: false,
+      fatal: true,
     }).decode(bytes);
   } catch {
     return binary;

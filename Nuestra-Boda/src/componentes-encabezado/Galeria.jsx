@@ -35,7 +35,7 @@ const palette = {
 // desktopPosition = tablet / computadora
 const images = [
   {
-    src: "/Carrusel01.jpeg",
+    src: "/Carrusel01v.jpeg",
     mobilePosition: "50% 85%",
     desktopPosition: "50% 90%",
   },
