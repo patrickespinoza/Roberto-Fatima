@@ -449,8 +449,8 @@ useEffect(() => {
 
                 <div
                   className="
-                    mt-3
-                    sm:mt-6
+                    mt-1
+                    sm:mt-2
                     h-px
                     w-16
                     lg:w-20
@@ -462,8 +462,8 @@ useEffect(() => {
 
                 <p
                   className="
-                    mt-3
-                    sm:mt-7
+                    mt-1
+                    sm:mt-2
                     font-serif
                     text-[10px]
                     uppercase
@@ -477,8 +477,8 @@ useEffect(() => {
 
                 <h1
                   className="
-                    mt-3
-                    sm:mt-6
+                    mt-1
+                    sm:mt-2
                     font-serif
                     text-[34px]
                     font-normal
@@ -532,20 +532,20 @@ useEffect(() => {
                 </h1>
 
                 <p
-                  className="mt-2 font-serif text-[9px] uppercase tracking-[0.16em] sm:text-[11px]"
+                  className="mt-1 font-serif text-[9px] uppercase tracking-[0.16em] sm:text-[11px]"
                   style={{ color: "rgba(255,255,255,0.78)" }}
                 >
                   Roberto López Maciel
                 </p>
 
-                <div className="mt-4 w-full max-w-[220px] sm:mt-8 sm:max-w-[260px]">
+                <div className="mt-2 w-full max-w-[220px] sm:mt-8 sm:max-w-[260px]">
                   <DecorativeDivider />
                 </div>
 
                 <p
                   className="
-                    mt-3
-                    sm:mt-6
+                    mt-1
+                    sm:mt-2
                     font-serif
                     text-[10px]
                     uppercase
@@ -559,8 +559,8 @@ useEffect(() => {
 
                 <p
                   className="
-                    mt-3
-                    sm:mt-5
+                    mt-1
+                    sm:mt-2
                     max-w-md
                     font-serif
                     text-[12px]
