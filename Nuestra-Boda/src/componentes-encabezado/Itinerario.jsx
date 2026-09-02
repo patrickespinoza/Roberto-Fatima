@@ -794,6 +794,7 @@ export default function ItinerarioRelojCentral() {
               italic
               leading-7
               sm:text-base
+              px-2
             "
             style={{
               color: "rgba(255,255,255,0.68)",

@@ -966,6 +966,7 @@ const Confirmacion = () => {
               italic
               leading-7
               sm:text-base
+              px-2
             "
             style={{
               color: palette.warmGray,

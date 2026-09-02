@@ -564,7 +564,7 @@ const DressCodePremium = () => {
           </h3>
 
           <p
-            className="mx-auto mt-4 max-w-xl font-serif text-[14px] leading-7 sm:text-[15px]"
+            className="mx-auto mt-4 max-w-xl font-serif text-[14px] leading-7 sm:text-[15px] px-2"
             style={{ color: palette.warmGray }}
           >
             Agradecemos a damas y caballeros evitar los siguientes colores,
@@ -589,7 +589,7 @@ const DressCodePremium = () => {
           </div>
 
           <p
-            className="mt-8 font-serif text-[13px] italic leading-6 sm:text-[14px]"
+            className="mt-8 font-serif text-[13px] italic leading-6 sm:text-[14px] px-2"
             style={{ color: palette.warmGray }}
           >
             Esta indicación aplica tanto para hombres como para mujeres.

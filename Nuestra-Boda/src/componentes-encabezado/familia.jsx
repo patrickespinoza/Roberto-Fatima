@@ -418,6 +418,7 @@ export default function FamiliaYPadrinos() {
               italic
               leading-7
               sm:text-base
+              px-2
             "
             style={{
               color: palette.gray,
@@ -622,6 +623,7 @@ export default function FamiliaYPadrinos() {
               italic
               leading-7
               sm:text-base
+              px-2
             "
             style={{
               color: palette.gray,

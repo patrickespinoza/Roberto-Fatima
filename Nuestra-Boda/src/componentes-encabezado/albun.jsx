@@ -636,6 +636,7 @@ const Album = () => {
               leading-7
               sm:text-[17px]
               sm:leading-8
+              px-2
             "
             style={{
               color: palette.warmGray,

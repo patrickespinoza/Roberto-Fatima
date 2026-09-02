@@ -566,10 +566,10 @@ export default function Galeria() {
           <p
             className="
               mx-auto
-              mt-5
+              mt-3
               max-w-xl
               font-serif
-              text-[14px]
+              text-[12px]
               italic
               leading-7
               sm:text-base

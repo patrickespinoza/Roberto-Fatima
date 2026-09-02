@@ -913,6 +913,7 @@ const Preguntas = () => {
               italic
               leading-7
               sm:text-base
+              px-2
             "
             style={{
               color: palette.warmGray,
@@ -1495,6 +1496,7 @@ const Preguntas = () => {
             leading-7
             sm:mt-12
             sm:text-base
+            px-2
           "
           style={{
             color: palette.warmGray,
