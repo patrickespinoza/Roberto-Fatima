@@ -30,13 +30,13 @@ const familias = [
     label: "Padres de la novia",
     nombres: [
       "Concepción Tercero Hernández",
-      "Jorge Tercero Gonzalez",
+      "Jorge Tercero González",
     ],
   },
 ];
 
 const padrinos = [
-  "Jorge Martin Tercero Hernández",
+  "Jorge Martín Tercero Hernández",
   "Nancy Maldonado Vázquez",
 ];
 
