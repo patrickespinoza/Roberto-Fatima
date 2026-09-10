@@ -498,7 +498,7 @@ useEffect(() => {
                   className="mt-2 font-serif text-[9px] uppercase tracking-[0.16em] sm:text-[11px]"
                   style={{ color: "rgba(255,255,255,0.78)" }}
                 >
-                  Fátima Fátima Tercero Hernández
+                  Fátima Tercero Hernández
                 </p>
 
                 <span
