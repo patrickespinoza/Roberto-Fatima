@@ -10,7 +10,7 @@ const API_URL =
 
 
 const NUMERO_WHATSAPP = "525611188682";
-const NOMBRE_CONTACTO = "Roberto y Martha";
+const NOMBRE_CONTACTO = "Roberto y Fátima";
 
 const palette = {
   ink: "#161616",
