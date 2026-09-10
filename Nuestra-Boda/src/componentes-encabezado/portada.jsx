@@ -1154,7 +1154,7 @@ useEffect(() => {
 
         <motion.img
           src="/portada.jpg"
-          alt="Roberto López Maciel y Fátima Fátima Tercero Hernández"
+          alt="Roberto López Maciel y Fátima Tercero Hernández"
           className="
             absolute
             inset-0
