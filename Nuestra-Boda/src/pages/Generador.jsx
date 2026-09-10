@@ -655,7 +655,7 @@ Roberto & Fátima 🤍`;
           >
             <img
               src="/portada.jpg"
-              alt="Portada de la invitación de Roberto y Martha"
+              alt="Portada de la invitación de Roberto y Fátima"
               className="
                 block
                 h-auto
