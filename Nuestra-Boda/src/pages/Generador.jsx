@@ -107,7 +107,7 @@ ${url}
 
 Será un gusto compartir este momento tan especial contigo.
 
-Roberto & Martha 🤍`;
+Roberto & Fátima 🤍`;
 
     setMensaje(mensajeWhatsApp);
 
@@ -211,7 +211,7 @@ Roberto & Martha 🤍`;
             color: palette.antiqueGoldDark,
           }}
         >
-          Roberto & Martha
+          Roberto & Fátima
         </p>
 
         <h1
@@ -630,7 +630,7 @@ Roberto & Martha 🤍`;
                 text-2xl
               "
             >
-              Roberto & Martha
+              Roberto & Fátima
             </h2>
           </div>
 
